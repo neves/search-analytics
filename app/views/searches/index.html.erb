@@ -1,2 +1,11 @@
-<h1>Searches#index</h1>
-<p>Find me in app/views/searches/index.html.erb</p>
+<h1>Search Stats</h1>
+
+<table>
+  <% @searches.each do |search| %>
+  <tr>
+    <td><%= search.md5 %></td>
+    <td><%= search.query %></td>
+    <td><%= search.hits %></td>
+  </tr>
+  <% end %>
+</table>
