@@ -7,4 +7,8 @@ class SearchesController < ApplicationController
     Search.createOrIncrement(params[:query])
   end
 
+  def clear
+    Search.delete_all
+    redirect_to action: 'index'
+  end
 end

@@ -23,4 +23,13 @@ RSpec.describe SearchesController, type: :controller do
       }.to change { Search.count }
     end
   end
+
+  describe 'DELETE #clear' do
+    it 'delete all searches' do
+      search = Search.createOrIncrement('search query string')
+      delete :clear
+      expect(Search.count).to be(0)
+      expect(response).to redirect_to(action: 'index')
+    end
+  end
 end

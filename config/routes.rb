@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :searches, only: [:index, :create]
+  resources :searches, only: [:index, :create] do
+    collection do
+      delete :clear
+    end
+  end
 
   resources :articles, only: :index
 
