@@ -16,3 +16,4 @@ Project demo at https://helpjuice-search-analytics.herokuapp.com/
 # Improvements
 
 - Update the analytics in real time using Action Cable
+- Add a debounce function to handle input after some milliseconds of inactivity.
