@@ -11,6 +11,7 @@ Project demo at https://helpjuice-search-analytics.herokuapp.com/
 - The query is stored by it's md5 hash, so the lookup is faster
 - The hit increment is done atomically
 - TODO: Enqueue the database updates for fast user return
+- TODO: Store the recents queries using redis, and send to database in background
 
 # Improvements
 
