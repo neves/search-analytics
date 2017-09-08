@@ -26,7 +26,7 @@ window.initSearchBox = function () {
   var searchInput = document.getElementById('search')
   var searchBox = new google.maps.places.SearchBox(searchInput)
   SearchAnalytics(searchInput, QueryRecognition(save))
-  searchBox.addListener('places_changed', function() {
-    console.log(searchBox.getPlaces())
-  })
+  // searchBox.addListener('places_changed', function() {
+  //   console.log(searchBox.getPlaces())
+  // })
 }
