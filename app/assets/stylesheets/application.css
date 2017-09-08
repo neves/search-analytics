@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.form-input[type=search] {
+  -webkit-appearance: searchfield;
+}

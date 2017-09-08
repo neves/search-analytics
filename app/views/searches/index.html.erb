@@ -1,11 +1,22 @@
-<h1>Search Stats</h1>
+<h1>Admin Analytics</h1>
 
-<table>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>md5</th>
+      <th>query</th>
+      <th>hits</th>
+    </tr>
+  </thead>
   <% @searches.each do |search| %>
   <tr>
-    <td><%= search.md5 %></td>
+    <td><small><%= search.md5 %></small></td>
     <td><%= search.query %></td>
     <td><%= search.hits %></td>
   </tr>
   <% end %>
 </table>
+
+<div class="divider"></div>
+
+<%= button_to 'clear', clear_searches_path, method: :delete, class: 'btn btn-primary' %>
