@@ -1,3 +1,21 @@
+/**
+The idea behind this function is to keep track of the user input,
+and as soon as the input changes to a different query, it commit the query using the saveFn function.
+For example:
+
+var queryRecognition = QueryRecognition(function (query) {
+  console.log('saving', query)
+})
+
+queryRecognition.update('Ho')
+queryRecognition.update('How do')
+queryRecognition.update('How do I canc')
+queryRecognition.update('How do I cancel my acc')
+queryRecognition.update('How do I cancel my subscription') // saving How do I cancel my acc
+queryRecognition.update('') // saving How do I cancel my subscription
+onBlur and onEnterKey works too
+
+*/
 module.exports = function QueryRecognition (saveFn) {
   return {
     longestQuery: '', // store the longest string typed
