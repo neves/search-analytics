@@ -4,12 +4,23 @@
     <title>SearchAnalytics</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= render 'navbar' %>
+      <div class="columns">
+        <div class="column col-9 col-mx-auto">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
