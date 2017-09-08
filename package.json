@@ -1,6 +1,12 @@
 {
   "name": "search-analytics",
   "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "rootDir": "./app/javascript"
+  },
   "dependencies": {
     "@rails/webpacker": "^3.0.1"
   },
