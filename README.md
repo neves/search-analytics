@@ -1,24 +1,13 @@
-# README
+# Search Analytics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The idea of this solution is to create a external micro-service that just do search analytics,
+and can be easily plugged into any search input on any site, pretty much like https://www.algolia.com does.
 
-Things you may want to cover:
+Project demo at https://helpjuice-search-analytics.herokuapp.com/
 
-* Ruby version
+# Performance
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- The query is processed on the client side before sending to the server side
+- The query is stored by it's md5 hash, so the lookup is faster
+- The hit increment is done atomically
+- TODO: Enqueue the database updates for fast user return
