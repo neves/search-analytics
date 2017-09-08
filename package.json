@@ -5,6 +5,7 @@
     "@rails/webpacker": "^3.0.1"
   },
   "devDependencies": {
+    "jest": "^21.0.2",
     "webpack-dev-server": "^2.7.1"
   }
 }
