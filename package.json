@@ -7,6 +7,9 @@
   "jest": {
     "rootDir": "./app/javascript"
   },
+  "engines": {
+    "node": "8.4.0"
+  },
   "dependencies": {
     "@rails/webpacker": "^3.0.1"
   },
