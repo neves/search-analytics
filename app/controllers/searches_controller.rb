@@ -1,4 +1,6 @@
 class SearchesController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
     @searches = Search.ordered_by_highest_frequency
   end
