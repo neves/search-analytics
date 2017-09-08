@@ -1,5 +1,17 @@
 <h1>Admin Analytics</h1>
 
+<% if @searches.empty? %>
+  <div class="empty">
+    <div class="empty-icon">
+      <i class="icon icon-menu"></i>
+    </div>
+    <p class="empty-title h5">You have no analytics</p>
+    <p class="empty-subtitle">Click the button to start searching</p>
+    <div class="empty-action">
+      <%= link_to 'Search Articles', articles_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+<% else %>
 <table class="table table-striped table-hover">
   <thead>
     <tr>
@@ -19,4 +31,5 @@
 
 <div class="divider"></div>
 
-<%= button_to 'clear', clear_searches_path, method: :delete, class: 'btn btn-primary' %>
+<%= button_to 'clear', clear_searches_path, method: :delete, data: {confirm: 'Are You Sure?'}, class: 'btn btn-primary' %>
+<% end %>
