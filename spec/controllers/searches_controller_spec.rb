@@ -16,4 +16,11 @@ RSpec.describe SearchesController, type: :controller do
     end
   end
 
+  describe 'POST #create' do
+    it 'creates a new search' do
+      expect {
+        post :create, params: {query: 'new search term'}
+      }.to change { Search.count }
+    end
+  end
 end
