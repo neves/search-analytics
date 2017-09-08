@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :searches
-  get 'searches/index'
+  resources :searches, only: [:index, :create]
 
   resources :articles, only: :index
 
