@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908182306) do
+ActiveRecord::Schema.define(version: 20170909013719) do
 
   create_table "searches", id: false, force: :cascade do |t|
     t.string "md5"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170908182306) do
     t.integer "hits", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["hits"], name: "index_searches_on_hits"
     t.index ["md5"], name: "index_searches_on_md5", unique: true
   end
 
